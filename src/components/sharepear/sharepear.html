@@ -1,0 +1,9 @@
+<h1>Sharepear</h1>
+<ul>
+    <li>
+        <button (click)="routerService.displayAlbumList()" [disabled]="routerService.albumList">Album List</button>
+    </li>
+</ul>
+<album-add></album-add>
+<album-show *if="routerService.albumShow"></album-show>
+<album-list *if="routerService.albumList"></album-list>

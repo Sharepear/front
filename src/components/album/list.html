@@ -1,0 +1,7 @@
+<h2>album-list</h2>
+<ul>
+    <li *for="#album of albumService.list">
+        <a href="#" (click)="show(album)">{{album.name}}</a>
+        <a href="#" (click)="albumService.remove(album)">&times;</a>
+    </li>
+</ul>
