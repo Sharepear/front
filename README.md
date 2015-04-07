@@ -1,11 +1,7 @@
-# angular2-playground
+# Sharepear Front
 
-Just want to show how components can interact
+Sharepear is photo gallery open source.
 
-
-## Demo
-
-See <a href="http://rawgit.com/SekibOmazic/angular2-playground/master/dist/index.html">Live demo</a>
 
 ## Install
 
