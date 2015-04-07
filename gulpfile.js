@@ -4,6 +4,7 @@ var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
 var traceur = require('gulp-traceur');
+var ghPages = require('gulp-gh-pages');
 
 var PATHS = {
     src: {
@@ -84,6 +85,11 @@ gulp.task('play', ['default'], function () {
     http.createServer(app).listen(port, function () {
       open('http://localhost:' + port);
     });
+});
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
 });
 
 gulp.task('default', ['js', 'html', 'libs']);
