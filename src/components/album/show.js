@@ -1,6 +1,7 @@
 import {Component, Template, If, For} from 'angular2/angular2';
 import {AlbumService} from 'components/album/service';
 import {RouterService} from 'components/router/service';
+import {ImageUpload} from 'components/image/upload';
 
 @Component({
     selector: 'album-show',
@@ -9,7 +10,7 @@ import {RouterService} from 'components/router/service';
 
 @Template({
     url: 'components/album/show.html',
-    directives: [If, For]
+    directives: [If, For, ImageUpload]
 })
 
 export class AlbumShow {
