@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
-
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
+*/
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -17,7 +17,6 @@
 
 body {
 	color: #fff;
-	background: #2f3238;
 	font-weight: 400;
 	font-size: 1em;
 	font-family: 'Raleway', Arial, sans-serif;
@@ -57,10 +56,6 @@ a:focus {
 .theme-7 a:hover, .theme-7 a:focus { color: #509EDB; }
 
 .theme-8 a { color: #938edc; }
-
-.theme-9 { background: #3D4444; color: #DADADA;}
-.theme-9 a { color: #DA7071; }
-.theme-9 a:hover, .theme-9 a:focus { color: #74777b; }
 
 .content {
 	min-height: 250px;

@@ -1,5 +1,25 @@
+.z-depth-1{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.z-depth-1-half{
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.z-depth-2{
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-3{
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.z-depth-4{
+    box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.z-depth-5{
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
 .menu {
-	position: relative;
+	position: fixed;
+    top: 0;
 	display: inline-block;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -8,7 +28,17 @@
 	-ms-user-select: none;
 	user-select: none;
 	cursor: pointer;
-	margin: 7em 0;
+	margin: 20px;
+    z-index: 200000;
+}
+
+.menu-right {
+    right: 0;
+}
+
+.menu-bottom {
+    bottom: 0;
+    top: inherit;
 }
 
 .trigger {
@@ -21,11 +51,15 @@
 	outline: none;
 	text-align: center;
 	font-size: 1.5em;
-	color: #fff;
+	color: rgba(255, 153, 0, 1);;
 	position: relative;
 	z-index: 1000;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+.trigger img {
+    width: 60px;
 }
 
 .trigger span {
@@ -45,11 +79,11 @@
 }
 
 .menu__items li {
-	width: 80%;
-	height: 80%;
-	top: 10%;
-	left: 10%;
-	line-height: 80px;
+	width: 60%;
+	height: 60%;
+	top: 20%;
+	left: 20%;
+	line-height: 60px;
 	font-size: 1.5em;
 	position: absolute;
 	z-index: -1;
@@ -62,63 +96,74 @@
 }
 
 .menu.menu--open .menu__items li:first-child {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(0, -160px, 0);
-	transform: scale3d(1, 1, 1) translate3d(0, -160px, 0);
+    transform: scale3d(1, 1, 1) translate3d(100px, 0, 0);
 }
 
 .menu.menu--open .menu__items li:nth-child(2) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(113.14px, -113.14px, 0);
-	transform: scale3d(1, 1, 1) translate3d(113.14px, -113.14px, 0);
+    transform: scale3d(1, 1, 1) translate3d(0, 100px, 0);
 }
 
 .menu.menu--open .menu__items li:nth-child(3) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(160px, 0, 0);
-	transform: scale3d(1, 1, 1) translate3d(160px, 0, 0);
+    transform: scale3d(1, 1, 1) translate3d(100px, 100px, 0);
 }
 
 .menu.menu--open .menu__items li:nth-child(4) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(113.14px, 113.14px, 0);
-	transform: scale3d(1, 1, 1) translate3d(113.14px, 113.14px, 0);
+    transform: scale3d(1, 1, 1) translate3d(200px, 0, 0);
 }
 
 .menu.menu--open .menu__items li:nth-child(5) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(0, 160px, 0);
-	transform: scale3d(1, 1, 1) translate3d(0, 160px, 0);
+    transform: scale3d(1, 1, 1) translate3d(0, 200px, 0);
 }
 
-.menu.menu--open .menu__items li:nth-child(6) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(-113.14px, 113.14px, 0);
-	transform: scale3d(1, 1, 1) translate3d(-113.14px, 113.14px, 0);
+
+
+
+
+.menu.menu--open.menu-right.menu-bottom .menu__items li:first-child {
+    transform: scale3d(1, 1, 1) translate3d(-100px, 0, 0);
 }
 
-.menu.menu--open .menu__items li:nth-child(7) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(-160px, 0, 0);
-	transform: scale3d(1, 1, 1) translate3d(-160px, 0, 0);
+.menu.menu--open.menu-right.menu-bottom .menu__items li:nth-child(2) {
+    transform: scale3d(1, 1, 1) translate3d(0, -100px, 0);
 }
 
-.menu.menu--open .menu__items li:nth-child(8) {
-	-webkit-transform: scale3d(1, 1, 1) translate3d(-113.14px, -113.14px, 0);
-	transform: scale3d(1, 1, 1) translate3d(-113.14px, -113.14px, 0);
+.menu.menu--open.menu-right.menu-bottom .menu__items li:nth-child(3) {
+    transform: scale3d(1, 1, 1) translate3d(-100px, -100px, 0);
 }
 
-.menu__items li a {
+.menu.menu--open.menu-right.menu-bottom .menu__items li:nth-child(4) {
+    transform: scale3d(1, 1, 1) translate3d(-200px, 0, 0);
+}
+
+.menu.menu--open.menu-right.menu-bottom .menu__items li:nth-child(5) {
+    transform: scale3d(1, 1, 1) translate3d(0, -200px, 0);
+}
+
+.menu__items li a, .menu .menu__items li button {
+    border-width: 0;
+    width: 100%;
+    height: 100%;
 	display: block;
-	background: #2E3535;
-	color: #DA7071;
+	background: white;
+	color: rgba(255, 153, 0, 0.6);
 	border-radius: 50%;
 	outline: none;
 	overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
 .menu__items li a:hover,
-.menu__items li a:focus {
+.menu__items li a:focus,
+.menu__items li button:hover,
+.menu__items li button:focus {
 	background: #272c2c;
 	color: #777;
 }
 
-.menu__items li a span {
+.menu__items li a span, .menu__items li button span {
 	position: absolute;
 	color: transparent;
 	top: 100%;
@@ -135,18 +180,29 @@
 }
 
 .morph-shape svg path {
-	fill: #DA7071;
+    fill: white;
 	-webkit-transition: fill 0.3s;
-	transition: fill 0.3s;
 }
 
 .menu--open .morph-shape svg path {
-	fill: #777;
+    fill: rgba(255, 153, 0, 0.3);
+    fill: rgba(50, 153, 187, 0.3);
+    fill: white;
+}
+
+.menu.menu--open .hidden-open {
+    display: none;
+}
+.menu .hidden-close {
+    display: none;
+}
+.menu.menu--open .hidden-close {
+    display: inherit;
 }
 
 @media screen and (max-width: 40em) {
-	.menu__items {
-		-webkit-transform: scale3d(0.8,0.8,1);
-		transform: scale3d(0.8,0.8,1);
-	}
+    .menu {
+        transform: scale3d(0.8,0.8,1);
+        margin: 0;
+    }
 }
