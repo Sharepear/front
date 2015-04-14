@@ -13,6 +13,13 @@
   padding: 4px;
   overflow-y: scroll;
 }
+
+@media (orientation: landscape) OR (orientation: portrait) {
+    .chromatic-gallery-full {
+        right: 0;
+    }
+}
+
 .chromatic-gallery-photo {
   float: left;
   background: grey;
