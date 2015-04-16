@@ -1,11 +1,11 @@
-import {Component, Template} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 
 @Component({
     selector: 'image-show'
 })
 
-@Template({
-    inline: '<img src="{{ url }}" alt="{{ name }}" />'
+@View({
+    template: '<img src="{{ url }}" alt="{{ name }}" />'
 })
 
 export class ImageShow {

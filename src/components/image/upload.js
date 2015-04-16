@@ -1,4 +1,4 @@
-import {Component, Template} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 import {MyDropzone} from 'components/image/dropzone';
 
 @Component({
@@ -6,8 +6,8 @@ import {MyDropzone} from 'components/image/dropzone';
     services: [MyDropzone]
 })
 
-@Template({
-    url: 'components/image/upload.html'
+@View({
+    templateUrl: 'components/image/upload.html'
 })
 
 export class ImageUpload {

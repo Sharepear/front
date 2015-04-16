@@ -1,4 +1,4 @@
-import {Component, Template} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 import {Inject} from 'angular2/di';
 import {AlbumService} from 'components/album/service';
 
@@ -7,8 +7,8 @@ import {AlbumService} from 'components/album/service';
     services: [AlbumService]
 })
 
-@Template({
-    url: 'components/album/add.html'
+@View({
+    templateUrl: 'components/album/add.html'
 })
 
 export class AlbumAdd {

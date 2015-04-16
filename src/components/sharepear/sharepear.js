@@ -1,4 +1,4 @@
-import {Component, Template, If} from 'angular2/angular2';
+import {Component, View, If} from 'angular2/angular2';
 import {Inject} from 'angular2/di';
 import {AlbumShow} from 'components/album/show';
 import {AlbumList} from 'components/album/list';
@@ -10,8 +10,8 @@ import {RouterService} from 'components/router/service';
     services: [RouterService]
 })
 
-@Template({
-    url: 'components/sharepear/sharepear.html',
+@View({
+    templateUrl: 'components/sharepear/sharepear.html',
     directives: [AlbumShow, AlbumList, AlbumAdd, If]
 })
 

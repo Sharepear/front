@@ -1,4 +1,4 @@
-import {Component, Template, If, For} from 'angular2/angular2';
+import {Component, View, If, For} from 'angular2/angular2';
 import {AlbumService} from 'components/album/service';
 import {RouterService} from 'components/router/service';
 import {ImageUpload} from 'components/image/upload';
@@ -8,8 +8,8 @@ import {ImageUpload} from 'components/image/upload';
     services: [AlbumService]
 })
 
-@Template({
-    url: 'components/album/show.html',
+@View({
+    templateUrl: 'components/album/show.html',
     directives: [If, For, ImageUpload]
 })
 

@@ -1,4 +1,4 @@
-import {Component, Template, For} from 'angular2/angular2';
+import {Component, View, For} from 'angular2/angular2';
 import {Inject} from 'angular2/di';
 import {AlbumService} from 'components/album/service';
 import {RouterService} from 'components/router/service';
@@ -8,8 +8,8 @@ import {RouterService} from 'components/router/service';
     services: [AlbumService, RouterService]
 })
 
-@Template({
-    url: 'components/album/list.html',
+@View({
+    templateUrl: 'components/album/list.html',
     directives: [For]
 })
 
