@@ -1,0 +1,9 @@
+<h2>album-show</h2>
+<a href="#" (click)="remove()">remove</a>
+<p *if="albumService.album">{{albumService.album.name}}</p>
+<ul *if="albumService.album && albumService.album.images ">
+    <li *for="#image of albumService.album.images">
+        <img src="{{ image.url }}" alt="{{ image.name }}" />
+    </li>
+</ul>
+<image-upload></image-upload>
