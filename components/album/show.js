@@ -1,4 +1,4 @@
-System.register("components/album/show", ["angular2/angular2", "components/album/service", "components/router/service", "components/image/upload"], function($__export) {
+System.register("components/album/show", ["angular2/angular2", "components/album/service", "components/album/chromatic", "components/router/service", "components/image/upload"], function($__export) {
   "use strict";
   var __moduleName = "components/album/show";
   var Component,
@@ -6,6 +6,7 @@ System.register("components/album/show", ["angular2/angular2", "components/album
       If,
       For,
       AlbumService,
+      AlbumChromatic,
       RouterService,
       ImageUpload,
       AlbumShow;
@@ -17,6 +18,8 @@ System.register("components/album/show", ["angular2/angular2", "components/album
       For = $__m.For;
     }, function($__m) {
       AlbumService = $__m.AlbumService;
+    }, function($__m) {
+      AlbumChromatic = $__m.AlbumChromatic;
     }, function($__m) {
       RouterService = $__m.RouterService;
     }, function($__m) {
@@ -40,7 +43,7 @@ System.register("components/album/show", ["angular2/angular2", "components/album
             services: [AlbumService]
           }), new View({
             templateUrl: 'components/album/show.html',
-            directives: [If, For, ImageUpload]
+            directives: [If, For, ImageUpload, AlbumChromatic]
           })];
         }});
     }
