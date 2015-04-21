@@ -12,12 +12,13 @@ import {Component, View} from 'angular2/angular2';
 export class AlbumChromatic {
     constructor() {
         console.log('component Chromatic mounted');
-        $('.album-chromatic').chromatic(this.getPhotos());
+        this.gallery = document.getElementsByClassName('album-chromatic');
+        new Chromatic.GalleryView(this.gallery, this.getPhotos());
     }
 
     onDestroy() {
         console.log('component onDestroy');
-        $('.album-chromatic').html('');
+        this.gallery.innerHTML = '';
     }
 
     getPhotos() {
