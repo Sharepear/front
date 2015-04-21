@@ -20,6 +20,9 @@ var PATHS = {
       'node_modules/angular2/node_modules/zone.js/long-stack-trace-zone.js',
       'node_modules/angular2/node_modules/rx/dist/rx.all.js',
       'node_modules/dropzone/dist/min/dropzone.min.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/chromatic.js/dist/chromatic.js',
+      'node_modules/chromatic.js/stylesheets/chromatic.css',
     ]
 };
 
