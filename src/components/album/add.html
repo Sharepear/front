@@ -1,4 +1,4 @@
 <form>
     <input type="text" placeholder="Add your album" #album>
-    <a href="#" class="btn btn-success" (click)="albumService.add(album.domElement.value);album.domElement.value = ''">Add</a>
+    <a href="#" class="btn btn-success" (click)="albumService.add(album.value);album.value = ''">Add</a>
 </form>
