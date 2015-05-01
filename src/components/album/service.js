@@ -14,9 +14,9 @@ export class AlbumService
             {
                 name: 'test',
                 images: [
-                    { name: "Image1", url: "http://lorempixel.com/400/200/" },
-                    { name: "Image2", url: "http://lorempixel.com/400/200/" },
-                    { name: "Image3", url: "http://lorempixel.com/400/200/" },
+                    { name: "Image1", url: "lorempixel.com/400/200/" },
+                    { name: "Image2", url: "lorempixel.com/400/200/" },
+                    { name: "Image3", url: "lorempixel.com/400/200/" },
                 ]
             }
         ];

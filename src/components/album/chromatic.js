@@ -1,8 +1,11 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, View, NgElement} from 'angular2/angular2';
 
 @Component({
     selector: 'album-chromatic',
-    lifecycle: ['onDestroy']
+    lifecycle: ['onDestroy'],
+    bind: {
+        "gallery": "gallery"
+    }
 })
 
 @View({
@@ -10,15 +13,17 @@ import {Component, View} from 'angular2/angular2';
 })
 
 export class AlbumChromatic {
-    constructor() {
+    el:NgElement;
+    constructor(el: NgElement) {
         console.log('component Chromatic mounted');
-        this.gallery = document.getElementsByClassName('album-chromatic');
-        new Chromatic.GalleryView(this.gallery, this.getPhotos());
+        this.el = el;
+        //this.gallery = document.getElementsByClassName('album-chromatic');
+        new Chromatic.GalleryView(document.getElementsByClassName('album-chromatic'), this.getPhotos());
     }
 
     onDestroy() {
         console.log('component onDestroy');
-        this.gallery.innerHTML = '';
+        this.el.domElement.querySelector('div').innerHTML = '';
     }
 
     getPhotos() {
